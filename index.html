@@ -319,6 +319,50 @@
           <div class="trust-badge"><span class="text-3xl">⚡</span><div><p class="font-display font-bold text-white">Rapidez real</p><p class="text-sm text-slate-400">La mayoría en el mismo día</p></div></div>
           <div class="trust-badge"><span class="text-3xl">💬</span><div><p class="font-display font-bold text-white">Trato cercano</p><p class="text-sm text-slate-400">Te explicamos todo sin tecnicismos</p></div></div>
         </div>
+
+        <!-- Deja tu opinión -->
+        <div class="mt-14 rounded-2xl bg-white/5 border border-white/10 p-6 sm:p-8">
+          <div class="text-center max-w-2xl mx-auto">
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-white">¿Has sido cliente? Cuéntanos tu experiencia</h3>
+            <p class="mt-2 text-slate-300">Tu opinión ayuda a más vecinos de Alcobendas a confiar en nosotros. Déjanos una reseña en Google o escríbela aquí mismo.</p>
+            <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
+              <!-- Reemplaza este enlace por el de "Escribir reseña" de tu Perfil de Empresa de Google -->
+              <a href="https://www.google.com/maps/search/?api=1&query=Centro+T%C3%A9cnico+Telefon%C3%ADa+%26+Ordenadores+Calle+de+la+Constituci%C3%B3n+35+Alcobendas" target="_blank" rel="noopener" class="btn-primary">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" opacity="0"/><path d="M12 .587l3.668 7.568L24 9.423l-6 5.857 1.417 8.263L12 19.771l-7.417 3.772L6 15.28 0 9.423l8.332-1.268z"/></svg>
+                Dejar reseña en Google
+              </a>
+              <button type="button" id="abrir-opinion" class="btn-ghost" aria-expanded="false" aria-controls="form-opinion">Escribir opinión aquí</button>
+            </div>
+          </div>
+
+          <!-- Formulario de opinión (oculto hasta pulsar el botón) -->
+          <form name="opiniones" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html" id="form-opinion" class="hidden mt-6 max-w-xl mx-auto">
+            <input type="hidden" name="form-name" value="opiniones" />
+            <p class="hidden"><label>No rellenar: <input name="bot-field" /></label></p>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="op-nombre" class="block text-sm font-semibold text-slate-200 mb-1.5">Tu nombre</label>
+                <input id="op-nombre" name="nombre" type="text" required class="form-input" placeholder="Ej.: María G." />
+              </div>
+              <div>
+                <label for="op-valoracion" class="block text-sm font-semibold text-slate-200 mb-1.5">Valoración</label>
+                <select id="op-valoracion" name="valoracion" class="form-input">
+                  <option value="5">★★★★★ (5) Excelente</option>
+                  <option value="4">★★★★ (4) Muy bien</option>
+                  <option value="3">★★★ (3) Bien</option>
+                  <option value="2">★★ (2) Regular</option>
+                  <option value="1">★ (1) Mejorable</option>
+                </select>
+              </div>
+            </div>
+            <div class="mt-4">
+              <label for="op-texto" class="block text-sm font-semibold text-slate-200 mb-1.5">Tu opinión</label>
+              <textarea id="op-texto" name="opinion" rows="3" required class="form-input" placeholder="Cuéntanos cómo fue tu experiencia"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full mt-5 justify-center">Enviar mi opinión</button>
+            <p class="mt-3 text-xs text-slate-400 text-center">Revisamos las opiniones antes de publicarlas. También puedes enviárnosla por <a href="https://wa.me/34691142182?text=Hola%2C%20quiero%20dejar%20una%20opini%C3%B3n" target="_blank" rel="noopener" class="text-accent font-semibold" data-whatsapp-link>WhatsApp</a>.</p>
+          </form>
+        </div>
       </div>
     </section>
 

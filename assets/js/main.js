@@ -55,6 +55,18 @@
     );
   }
 
+  /* ---------- Mostrar/ocultar formulario de opinión ---------- */
+  const opinionBtn = $('#abrir-opinion');
+  const opinionForm = $('#form-opinion');
+  if (opinionBtn && opinionForm) {
+    opinionBtn.addEventListener('click', () => {
+      const open = opinionForm.classList.toggle('hidden') === false;
+      opinionBtn.setAttribute('aria-expanded', String(open));
+      opinionBtn.textContent = open ? 'Cerrar formulario' : 'Escribir opinión aquí';
+      if (open) opinionForm.querySelector('input, textarea')?.focus();
+    });
+  }
+
   /* ---------- Header al hacer scroll ---------- */
   const header = $('#site-header');
   const onScroll = () => {

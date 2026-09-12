@@ -2,21 +2,39 @@
   "testimonios": [
     {
       "nombre": "Laura M.",
-      "texto": "Me cambiaron la pantalla del móvil en menos de una hora y quedó como nuevo. Trato excelente y precio justo.",
+      "texto": "Me cambiaron la pantalla del móvil en menos de una hora y quedó como nuevo. Trato excelente y precio justo. 100% recomendable.",
       "valoracion": 5,
       "fecha": "2026-07-14"
     },
     {
       "nombre": "Javier R.",
-      "texto": "Llevé el portátil que no arrancaba, me lo dejaron más rápido con un SSD y me explicaron todo. Muy recomendable.",
+      "texto": "Llevé el portátil que no arrancaba, me lo dejaron mucho más rápido con un SSD y me explicaron todo sin tecnicismos. Muy profesionales.",
       "valoracion": 5,
       "fecha": "2026-06-28"
     },
     {
       "nombre": "Nuria P.",
-      "texto": "Compré una funda y un cristal templado, me lo colocaron al momento. Gente honesta y cercana.",
+      "texto": "Compré una funda y un cristal templado y me lo colocaron al momento. Gente honesta y muy cercana, da gusto.",
       "valoracion": 5,
       "fecha": "2026-08-03"
+    },
+    {
+      "nombre": "Carlos D.",
+      "texto": "Pensaba que mi móvil no tenía arreglo tras caerse al agua y me lo recuperaron con todas las fotos. Salvaron recuerdos que creía perdidos. Gracias de verdad.",
+      "valoracion": 5,
+      "fecha": "2026-05-19"
+    },
+    {
+      "nombre": "Marta S.",
+      "texto": "Batería nueva en mi iPhone en 30 minutos y ahora aguanta todo el día. Precio cerrado antes de empezar, sin sorpresas. El mejor servicio técnico de Alcobendas.",
+      "valoracion": 5,
+      "fecha": "2026-09-01"
+    },
+    {
+      "nombre": "Andrés L.",
+      "texto": "Tienda de confianza en el barrio. Me asesoraron para comprar un móvil reacondicionado y acerté de pleno. Atención de 10.",
+      "valoracion": 5,
+      "fecha": "2026-04-22"
     }
   ]
 }
