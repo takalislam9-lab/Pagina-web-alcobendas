@@ -1,0 +1,12 @@
+{
+  "telefono": "916 52 62 12",
+  "whatsapp": "34620936722",
+  "email": "Contacto@brunoalcobendas.com",
+  "direccion": "Calle Constitución, 65\n28100 Alcobendas, Madrid",
+  "horario": [
+    { "linea": "Lunes a Viernes: 10:00–14:00 · 17:00–20:00" },
+    { "linea": "Sábado: 10:00–14:00" },
+    { "linea": "Domingo: cerrado" }
+  ],
+  "hero_imagen": ""
+}
