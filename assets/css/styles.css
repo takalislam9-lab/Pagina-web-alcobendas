@@ -137,8 +137,8 @@ section[id] { scroll-margin-top: 5rem; }
 /* La barra es oscura y opaca siempre (texto blanco legible sobre cualquier
    sección). Al hacer scroll solo añadimos una sombra para despegarla. */
 #site-header.scrolled {
-  background: rgba(15,23,42,.98);
-  box-shadow: 0 10px 30px -18px rgba(0,0,0,.7);
+  background: #ffffff;
+  box-shadow: 0 10px 30px -18px rgba(15,23,42,.45);
 }
 
 /* Respeta usuarios que prefieren menos movimiento */

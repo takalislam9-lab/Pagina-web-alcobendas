@@ -61,7 +61,7 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3" />
 
   <!-- ============ DATOS ESTRUCTURADOS (Local SEO) ============ -->
   <script type="application/ld+json">
@@ -98,23 +98,23 @@
 <body class="font-sans text-ink-800 bg-white antialiased">
 
   <!-- ===================== HEADER / NAV ===================== -->
-  <header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-ink-900/95 backdrop-blur border-b border-white/10 transition-shadow duration-300">
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-white border-b border-slate-200 shadow-sm transition-shadow duration-300">
     <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 md:h-20">
-        <a href="#inicio" class="flex items-center gap-2.5 font-display font-extrabold text-lg text-white transition-colors" data-logo>
+        <a href="#inicio" class="flex items-center gap-2.5 font-display font-extrabold text-lg text-ink-900 transition-colors" data-logo>
           <span class="grid place-items-center w-10 h-10 rounded-xl bg-brand-600 text-white shadow-soft">🛠️</span>
-          <span class="leading-tight">Centro Técnico<span class="block text-[11px] font-semibold tracking-wide text-brand-200 uppercase" data-logo-sub>Telefonía &amp; Ordenadores</span></span>
+          <span class="leading-tight">Centro Técnico<span class="block text-[11px] font-semibold tracking-wide text-brand-600 uppercase" data-logo-sub>Telefonía &amp; Ordenadores</span></span>
         </a>
 
-        <ul class="hidden lg:flex items-center gap-8 font-medium text-sm" data-nav-links>
-          <li><a href="#servicios" class="hover:text-brand-400 transition-colors">Servicios</a></li>
-          <li><a href="#catalogo" class="hover:text-brand-400 transition-colors">Catálogo</a></li>
-          <li><a href="#opiniones" class="hover:text-brand-400 transition-colors">Opiniones</a></li>
-          <li><a href="#contacto" class="hover:text-brand-400 transition-colors">Contacto</a></li>
+        <ul class="hidden lg:flex items-center gap-8 font-medium text-sm text-ink-700" data-nav-links>
+          <li><a href="#servicios" class="hover:text-brand-600 transition-colors">Servicios</a></li>
+          <li><a href="#catalogo" class="hover:text-brand-600 transition-colors">Catálogo</a></li>
+          <li><a href="#opiniones" class="hover:text-brand-600 transition-colors">Opiniones</a></li>
+          <li><a href="#contacto" class="hover:text-brand-600 transition-colors">Contacto</a></li>
         </ul>
 
         <div class="hidden lg:flex items-center gap-3">
-          <a href="tel:+34691142182" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-300 transition-colors" data-tel-link>
+          <a href="tel:+34691142182" class="inline-flex items-center gap-2 text-sm font-semibold text-ink-900 hover:text-brand-600 transition-colors" data-tel-link>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg>
             <span data-phone-display>691 14 21 82</span>
           </a>
@@ -124,21 +124,21 @@
           </a>
         </div>
 
-        <button id="menu-toggle" class="lg:hidden grid place-items-center w-10 h-10 rounded-lg text-white" aria-label="Abrir menú" aria-expanded="false">
+        <button id="menu-toggle" class="lg:hidden grid place-items-center w-10 h-10 rounded-lg text-ink-900" aria-label="Abrir menú" aria-expanded="false">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
         </button>
       </div>
     </nav>
 
     <!-- Menú móvil -->
-    <div id="mobile-menu" class="lg:hidden hidden bg-ink-900/98 backdrop-blur border-t border-white/10">
-      <ul class="px-6 py-4 space-y-1 text-white font-medium">
-        <li><a href="#servicios" class="block py-3 border-b border-white/5">Servicios</a></li>
-        <li><a href="#catalogo" class="block py-3 border-b border-white/5">Catálogo</a></li>
-        <li><a href="#opiniones" class="block py-3 border-b border-white/5">Opiniones</a></li>
-        <li><a href="#contacto" class="block py-3 border-b border-white/5">Contacto</a></li>
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-slate-200 shadow-sm">
+      <ul class="px-6 py-4 space-y-1 text-ink-800 font-medium">
+        <li><a href="#servicios" class="block py-3 border-b border-slate-100">Servicios</a></li>
+        <li><a href="#catalogo" class="block py-3 border-b border-slate-100">Catálogo</a></li>
+        <li><a href="#opiniones" class="block py-3 border-b border-slate-100">Opiniones</a></li>
+        <li><a href="#contacto" class="block py-3 border-b border-slate-100">Contacto</a></li>
         <li class="pt-3 flex gap-3">
-          <a href="tel:+34691142182" class="flex-1 text-center py-3 rounded-lg bg-white/10 font-semibold" data-tel-link>Llamar</a>
+          <a href="tel:+34691142182" class="flex-1 text-center py-3 rounded-lg bg-slate-100 text-ink-900 font-semibold" data-tel-link>Llamar</a>
           <a href="https://wa.me/34691142182" target="_blank" rel="noopener" class="flex-1 text-center py-3 rounded-lg bg-accent text-white font-semibold" data-whatsapp-link>WhatsApp</a>
         </li>
       </ul>
@@ -488,6 +488,6 @@
 
   <!-- Netlify Identity (para el login del CMS) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v=3" defer></script>
 </body>
 </html>
