@@ -1,0 +1,107 @@
+# ============================================================================
+# Decap CMS — Configuración del panel de gestión
+# Panel accesible en: /admin  ·  El cliente edita contenido sin tocar código.
+# ----------------------------------------------------------------------------
+# BACKEND (elige uno):
+#   - git-gateway : recomendado en Netlify. Requiere activar "Identity" y
+#                   "Git Gateway" en el panel de Netlify (ver README.md).
+#   - github      : alternativa sin Netlify. Descomenta el bloque de abajo.
+# ============================================================================
+
+backend:
+  name: git-gateway
+  branch: main          # Rama de publicación (cambia a la rama de producción)
+
+# --- Alternativa con GitHub directo (descomenta y comenta git-gateway) ------
+# backend:
+#   name: github
+#   repo: takalislam9-lab/pagina-web-alcobendas
+#   branch: main
+
+# Modo edición local: permite previsualizar con `npx decap-server` (ver README)
+local_backend: true
+
+# Idioma del panel y ajustes de medios
+locale: es
+media_folder: "assets/uploads"      # Dónde se guardan las imágenes subidas
+public_folder: "/assets/uploads"    # Cómo se referencian en la web
+
+# Mensajes de commit en español
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  # ------------------------------------------------------------------
+  # 1) AJUSTES GENERALES DEL NEGOCIO
+  # ------------------------------------------------------------------
+  - name: "ajustes"
+    label: "⚙️ Ajustes del negocio"
+    files:
+      - name: "general"
+        label: "Datos de contacto y cabecera"
+        file: "content/ajustes.json"
+        description: "Teléfono, WhatsApp, dirección, horario e imagen principal."
+        fields:
+          - { name: "telefono", label: "Teléfono (visible)", widget: "string", hint: "Ej.: 691 14 21 82" }
+          - { name: "whatsapp", label: "WhatsApp (solo números con prefijo)", widget: "string", hint: "Ej.: 34691142182" }
+          - { name: "email", label: "Email", widget: "string", required: false }
+          - { name: "direccion", label: "Dirección", widget: "text", hint: "Usa un salto de línea para la segunda línea." }
+          - name: "horario"
+            label: "Horario"
+            widget: "list"
+            fields:
+              - { name: "linea", label: "Línea de horario", widget: "string" }
+          - { name: "hero_titulo", label: "Título principal (opcional)", widget: "string", required: false, hint: "Déjalo vacío para usar el texto por defecto." }
+          - { name: "hero_subtitulo", label: "Subtítulo principal (opcional)", widget: "text", required: false }
+          - { name: "hero_imagen", label: "Imagen de fondo del inicio (opcional)", widget: "image", required: false }
+
+  # ------------------------------------------------------------------
+  # 2) CATÁLOGO / INVENTARIO
+  # ------------------------------------------------------------------
+  - name: "catalogo"
+    label: "🛒 Catálogo (fundas, móviles, accesorios)"
+    files:
+      - name: "productos"
+        label: "Productos disponibles"
+        file: "content/productos.json"
+        description: "Añade, edita o quita productos. Aparecen al instante en la web."
+        fields:
+          - name: "productos"
+            label: "Productos"
+            label_singular: "Producto"
+            widget: "list"
+            summary: "{{fields.nombre}} — {{fields.categoria}}"
+            fields:
+              - { name: "nombre", label: "Nombre", widget: "string" }
+              - name: "categoria"
+                label: "Categoría"
+                widget: "select"
+                options: ["Fundas", "Smartphones", "Accesorios", "Cargadores", "Cristales templados"]
+              - { name: "precio", label: "Precio (€)", widget: "number", required: false, value_type: "float", hint: "Déjalo vacío para mostrar 'Consultar'." }
+              - { name: "descripcion", label: "Descripción", widget: "text", required: false }
+              - { name: "imagen", label: "Foto del producto", widget: "image", required: false }
+              - { name: "disponible", label: "Disponible en stock", widget: "boolean", default: true }
+              - { name: "destacado", label: "Destacado", widget: "boolean", default: false }
+
+  # ------------------------------------------------------------------
+  # 3) TESTIMONIOS / OPINIONES
+  # ------------------------------------------------------------------
+  - name: "testimonios"
+    label: "⭐ Opiniones de clientes"
+    files:
+      - name: "lista"
+        label: "Testimonios"
+        file: "content/testimonios.json"
+        description: "Opiniones que se muestran en la sección de confianza."
+        fields:
+          - name: "testimonios"
+            label: "Testimonios"
+            label_singular: "Testimonio"
+            widget: "list"
+            summary: "{{fields.nombre}} ({{fields.valoracion}}★)"
+            fields:
+              - { name: "nombre", label: "Nombre del cliente", widget: "string" }
+              - { name: "texto", label: "Opinión", widget: "text" }
+              - { name: "valoracion", label: "Estrellas (1-5)", widget: "number", default: 5, min: 1, max: 5, value_type: "int" }
+              - { name: "fecha", label: "Fecha", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false, required: false }

@@ -1,0 +1,4 @@
+/* Entrada de Tailwind para compilación de producción (npm run build). */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

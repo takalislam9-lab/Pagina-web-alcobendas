@@ -1,0 +1,76 @@
+{
+  "productos": [
+    {
+      "nombre": "Funda silicona antigolpes iPhone",
+      "categoria": "Fundas",
+      "precio": 12.9,
+      "descripcion": "Funda de silicona suave con protección de esquinas. Varios modelos y colores disponibles.",
+      "imagen": "",
+      "disponible": true,
+      "destacado": true
+    },
+    {
+      "nombre": "Funda libro con tarjetero Samsung",
+      "categoria": "Fundas",
+      "precio": 15.9,
+      "descripcion": "Tipo cartera con cierre magnético y ranura para tarjetas. Compatible con gama Galaxy A y S.",
+      "imagen": "",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "nombre": "Cristal templado 9H (colocación incluida)",
+      "categoria": "Cristales templados",
+      "precio": 9.9,
+      "descripcion": "Protector de pantalla full cover. Colocación profesional sin burbujas incluida en tienda.",
+      "imagen": "",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "nombre": "Cargador rápido USB-C 20W",
+      "categoria": "Cargadores",
+      "precio": 14.9,
+      "descripcion": "Carga rápida Power Delivery. Compatible con iPhone y Android de última generación.",
+      "imagen": "",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "nombre": "Cable USB-C a USB-C reforzado 1,5 m",
+      "categoria": "Cargadores",
+      "precio": 7.9,
+      "descripcion": "Cable trenzado de nylon, resistente a tirones y dobleces.",
+      "imagen": "",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "nombre": "iPhone 12 64GB reacondicionado",
+      "categoria": "Smartphones",
+      "precio": 329,
+      "descripcion": "Equipo revisado y probado, con garantía. Batería al 90% o superior.",
+      "imagen": "",
+      "disponible": true,
+      "destacado": true
+    },
+    {
+      "nombre": "Samsung Galaxy A15 128GB nuevo",
+      "categoria": "Smartphones",
+      "precio": 179,
+      "descripcion": "Smartphone nuevo, libre y precintado. Ideal calidad-precio.",
+      "imagen": "",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "nombre": "Auriculares Bluetooth TWS",
+      "categoria": "Accesorios",
+      "precio": 24.9,
+      "descripcion": "Inalámbricos con estuche de carga y control táctil.",
+      "imagen": "",
+      "disponible": true,
+      "destacado": false
+    }
+  ]
+}

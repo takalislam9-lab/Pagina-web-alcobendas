@@ -1,0 +1,35 @@
+# ============================================================================
+# Netlify — Configuración de despliegue
+# Sitio estático: no requiere build. Decap CMS usa Identity + Git Gateway.
+# ============================================================================
+
+[build]
+  publish = "."
+  # Sin paso de compilación (Tailwind se sirve por CDN).
+  # Para producción compilada, usa:  command = "npm run build"
+
+# Cabeceras de seguridad y caché
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# El contenido del CMS no debe cachearse de forma agresiva
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "public, max-age=60, must-revalidate"
+
+# Redirección amigable del panel
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301

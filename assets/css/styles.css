@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Centro Técnico Telefonía & Ordenadores — Estilos personalizados
+   Complementan a Tailwind (componentes reutilizables y detalles visuales).
+   ========================================================================== */
+
+html { scroll-behavior: smooth; }
+body { -webkit-font-smoothing: antialiased; }
+
+/* Desplazamiento con header fijo */
+section[id] { scroll-margin-top: 5rem; }
+
+/* ---------- HERO ---------- */
+.hero-bg { background-color: #0f172a; }
+
+/* Patrón sutil de circuitos/puntos para el fondo */
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,.6) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+/* Permite sobreescribir la imagen de fondo del hero desde el CMS via JS */
+.hero-bg.has-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  opacity: .25;
+}
+
+/* ---------- BOTONES ---------- */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .85rem 1.5rem; border-radius: .85rem;
+  background-color: #2563eb; color: #fff; font-weight: 600;
+  box-shadow: 0 10px 30px -8px rgba(37,99,235,.6);
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.btn-primary:hover { background-color: #1d4ed8; transform: translateY(-1px); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .85rem 1.5rem; border-radius: .85rem;
+  background-color: rgba(255,255,255,.08); color: #fff; font-weight: 600;
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(4px);
+  transition: background-color .15s ease, transform .15s ease;
+}
+.btn-ghost:hover { background-color: rgba(255,255,255,.16); transform: translateY(-1px); }
+
+.btn-whatsapp {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .55rem 1.1rem; border-radius: .7rem;
+  background-color: #22c55e; color: #fff; font-weight: 600; font-size: .875rem;
+  transition: background-color .15s ease;
+}
+.btn-whatsapp:hover { background-color: #16a34a; }
+
+/* ---------- TARJETAS DE SERVICIO ---------- */
+.service-card {
+  background: #fff; border: 1px solid #eef2f7; border-radius: 1.25rem;
+  padding: 2rem; box-shadow: 0 10px 40px -18px rgba(15,23,42,.15);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  display: flex; flex-direction: column;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px -20px rgba(37,99,235,.35);
+  border-color: #bfdbfe;
+}
+.service-icon {
+  width: 3.5rem; height: 3.5rem; border-radius: 1rem;
+  display: grid; place-items: center; font-size: 1.75rem;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+.service-link {
+  margin-top: auto; padding-top: 1.25rem;
+  font-weight: 600; color: #2563eb; font-size: .9rem;
+  transition: gap .15s ease, color .15s ease;
+}
+.service-link:hover { color: #1d4ed8; }
+
+/* ---------- TARJETAS DE PRODUCTO (CATÁLOGO) ---------- */
+.product-card {
+  background: #fff; border: 1px solid #eef2f7; border-radius: 1rem;
+  overflow: hidden; display: flex; flex-direction: column;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -18px rgba(15,23,42,.3); }
+.product-media {
+  aspect-ratio: 4 / 3; background: #f1f5f9; display: grid; place-items: center;
+  overflow: hidden; position: relative;
+}
+.product-media img { width: 100%; height: 100%; object-fit: cover; }
+.product-media .placeholder { font-size: 3rem; opacity: .5; }
+
+/* ---------- FILTROS ---------- */
+.filter-btn {
+  padding: .5rem 1.1rem; border-radius: 999px; font-size: .875rem; font-weight: 600;
+  border: 1px solid #e2e8f0; background: #fff; color: #334155;
+  transition: all .15s ease; cursor: pointer;
+}
+.filter-btn:hover { border-color: #93c5fd; color: #2563eb; }
+.filter-btn.is-active { background: #2563eb; border-color: #2563eb; color: #fff; }
+
+/* ---------- TESTIMONIOS ---------- */
+.testimonial-card {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 1.25rem; padding: 1.75rem; backdrop-filter: blur(4px);
+}
+
+/* ---------- SELLOS DE CONFIANZA ---------- */
+.trust-badge {
+  display: flex; align-items: center; gap: 1rem;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 1rem; padding: 1.25rem 1.5rem;
+}
+
+/* ---------- INFO CONTACTO ---------- */
+.info-card {
+  background: #fff; border: 1px solid #eef2f7; border-radius: 1rem; padding: 1.25rem;
+  box-shadow: 0 8px 30px -18px rgba(15,23,42,.15);
+}
+
+/* ---------- FORMULARIO ---------- */
+.form-label { display: block; font-size: .8rem; font-weight: 600; color: #334155; margin-bottom: .35rem; }
+.form-input {
+  width: 100%; padding: .7rem .9rem; border-radius: .7rem;
+  border: 1px solid #e2e8f0; outline: none; font-size: .9rem;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.form-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,.15); }
+
+/* ---------- HEADER AL HACER SCROLL (toggle via JS) ---------- */
+#site-header.scrolled {
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px -18px rgba(15,23,42,.3);
+}
+#site-header.scrolled [data-nav-links] a,
+#site-header.scrolled [data-logo],
+#site-header.scrolled [data-tel-link],
+#site-header.scrolled #menu-toggle { color: #0f172a; }
+#site-header.scrolled [data-logo-sub] { color: #2563eb; }
+
+/* Respeta usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-pulse, .animate-bounce { animation: none; }
+  .service-card:hover, .product-card:hover, .btn-primary:hover, .btn-ghost:hover { transform: none; }
+}

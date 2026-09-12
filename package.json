@@ -1,0 +1,15 @@
+{
+  "name": "centro-tecnico-alcobendas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web del Centro Técnico Telefonía & Ordenadores (Alcobendas) con Decap CMS.",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify",
+    "cms": "decap-server"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "decap-server": "^3.3.0"
+  }
+}

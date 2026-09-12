@@ -1,0 +1,12 @@
+# Dependencias
+node_modules/
+
+# CSS compilado (se genera con `npm run build`; descomenta si lo versionas)
+# assets/css/tailwind.css
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+.env
+.netlify/

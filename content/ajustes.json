@@ -1,0 +1,14 @@
+{
+  "telefono": "691 14 21 82",
+  "whatsapp": "34691142182",
+  "email": "info@centrotecnicoalcobendas.es",
+  "direccion": "Calle de la Constitución, 35\n28100 Alcobendas, Madrid",
+  "horario": [
+    { "linea": "Lunes a Viernes: 10:00–14:00 · 17:00–20:30" },
+    { "linea": "Sábado: 10:00–14:00" },
+    { "linea": "Domingo: cerrado" }
+  ],
+  "hero_titulo": "",
+  "hero_subtitulo": "",
+  "hero_imagen": ""
+}

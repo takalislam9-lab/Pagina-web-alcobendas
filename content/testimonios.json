@@ -1,0 +1,22 @@
+{
+  "testimonios": [
+    {
+      "nombre": "Laura M.",
+      "texto": "Me cambiaron la pantalla del móvil en menos de una hora y quedó como nuevo. Trato excelente y precio justo.",
+      "valoracion": 5,
+      "fecha": "2026-07-14"
+    },
+    {
+      "nombre": "Javier R.",
+      "texto": "Llevé el portátil que no arrancaba, me lo dejaron más rápido con un SSD y me explicaron todo. Muy recomendable.",
+      "valoracion": 5,
+      "fecha": "2026-06-28"
+    },
+    {
+      "nombre": "Nuria P.",
+      "texto": "Compré una funda y un cristal templado, me lo colocaron al momento. Gente honesta y cercana.",
+      "valoracion": 5,
+      "fecha": "2026-08-03"
+    }
+  ]
+}
