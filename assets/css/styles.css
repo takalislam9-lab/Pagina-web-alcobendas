@@ -134,16 +134,12 @@ section[id] { scroll-margin-top: 5rem; }
 .form-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,.15); }
 
 /* ---------- HEADER AL HACER SCROLL (toggle via JS) ---------- */
+/* La barra es oscura y opaca siempre (texto blanco legible sobre cualquier
+   sección). Al hacer scroll solo añadimos una sombra para despegarla. */
 #site-header.scrolled {
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 30px -18px rgba(15,23,42,.3);
+  background: rgba(15,23,42,.98);
+  box-shadow: 0 10px 30px -18px rgba(0,0,0,.7);
 }
-#site-header.scrolled [data-nav-links] a,
-#site-header.scrolled [data-logo],
-#site-header.scrolled [data-tel-link],
-#site-header.scrolled #menu-toggle { color: #0f172a; }
-#site-header.scrolled [data-logo-sub] { color: #2563eb; }
 
 /* Respeta usuarios que prefieren menos movimiento */
 @media (prefers-reduced-motion: reduce) {
